@@ -1,13 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Cadastro</h1>
 
-<button><a href="index.html">Voltar para a página inicial</a></button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Usuário</title>
+</head>
+
+<body>
+  <div style="text-align: center;">
+    <h2>Cadastro</h2>
+    <!-- 
+    <form> -> Container do formulário
+    <input>, <textarea>, <select> -> campos do formulário
+      <label> -> rótulo dos campos
+  -->
+    <form>
+      <!-- O atributo "for" vincula o campo e o rótulo -->
+      <div>
+        <label for="Nome">Nome</label>
+      <input type="text" name="nome" placeholder="Digite seu nome:" id="Nome" value="José" required />
+      </div>
+
+      <div>
+      <label for="Email">Email:</label>
+      <input type="email" id="Email" name="email" placeholder="Digite o seu email" required />
+      </div>
+
+      <div>
+      <label for="Password">Senha:</label>
+      <input type="password" minlength="8" name="password" id="Password" placeholder="Digite sua senha" required />
+      </div>
+
+      <div>
+      <label for="Telefone">Telefone:</label>
+      <input type="tel" name="telefone" id="Telefone" placeholder="Seu telefone pessoal" required />
+      </div>
+
+      <div>
+      <label for="Linkedin">Link do Linkedin</label>
+      <input type="url" name="linkedin" id="Linkedin" placeholder="linkedin.com/in/seunome" required />
+      </div>
+      
+      <div>
+      <label for="Idade">Idade:</label>
+      <input type="number" name="idade" id="Idade" placeholder="Sua idade" min="0" max="130" required />
+      </div>
+
+      <div>
+      <label for="Data">Data de Nascimento:</label>
+      <input type="date" name="data" id="Data" max="2024-06-12" required />
+      </div>
+
+      <div>
+      <label for="Foto">Sua foto:</label>
+      <input type="file" name="foto" id="Foto" accept=".pdf,.png,.jpg" />
+      </div>
+
+      <div>
+      <p>Sua linguagem favorita:</p>
+      <input type="radio" id="html" name="linguagem" required>
+      <label for="html">HTML</label>
+
+      <input type="radio" id="css" name="linguagem">
+      <label for="css">CSS</label>
+
+      <input type="radio" id="javascript" name="linguagem">
+      <label for="javascript">JAVASCRIPT</label>
+      </div>
+      <br>
+
+      <div>
+      <label for="Descricao">Fale um pouco sobre você:</label>
+      </div>
+      <div>
+      <textarea name="descricao" id="Descricao" placeholder="Fale dos seus hobbies, etc" required></textarea>
+      </div>
+
+      <div>
+      <label for="Escolaridade">Escolaridade:</label>
+      <select name="escolaridade" id="Escolaridade" required>
+        <option disabled selected value="">Selecione uma opção</option>
+        <option>Ensino Fundamentel Completo</option>
+        <option>Ensino Médio Completo</option>
+        <option>Ensino Superior Completo</option>
+      </select>
+      </div> <br>
+      <button type="submit">Enviar</button>
+      <button type="reset">Limpar</button>
+      <button type="button">Ajuda?</button>
+    </form>
+
+    <hr />
+
+    <button><a href="index.html">Voltar para a página inicial</a></button>
+  </div>
 </body>
+
 </html>
